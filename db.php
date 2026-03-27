@@ -1,0 +1,1 @@
+/workspaces/gbox-supplies/plugins/query-monitor/wp-content/db.php

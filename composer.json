@@ -13,7 +13,11 @@
 
 	"require": {
 		"composer/installers": "^2.3",
-		"wpackagist-plugin/query-monitor": "^3.14"
+		"wpackagist-plugin/forminator": "^1.52",
+		"wpackagist-plugin/icon-block": "2.0.0",
+		"wpackagist-plugin/performance-lab": "^4.1",
+		"wpackagist-plugin/query-monitor": "^3.14",
+		"wpackagist-plugin/wordpress-seo": "^27.2"
 	},
 
 	"require-dev": {
