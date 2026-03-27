@@ -6,15 +6,15 @@
 		"context": "."
 	},
 
-	"forwardPorts": [8000, 3306],
+	"forwardPorts": [8200, 3306],
 	"portsAttributes": {
-		"8000": {
+		"8200": {
 			"label": "WordPress",
 			"onAutoForward": "notify"
 		}
 	},
 
-	"workspaceFolder": "/workspaces/wp-content",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
@@ -30,6 +30,6 @@
 	],
 
 	// Sets up WordPress on container start.
-	"postStartCommand": "sudo service mariadb start && sleep 5 && .devcontainer/wp-setup.sh && sudo service apache2 restart",
+	"postStartCommand": "sudo service mariadb start && sleep 5 && bash .devcontainer/wp-setup.sh && sudo service apache2 restart",
 	"remoteUser": "vscode"
 }

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+WP_PORT=8200
+
 echo "🔧 Starting WordPress Development Environment..."
 echo ""
 
@@ -15,7 +17,7 @@ sleep 3
 
 # Check if WordPress is responding
 echo "🧪 Testing WordPress..."
-if curl -s --connect-timeout 5 http://localhost:8000 >/dev/null; then
+if curl -s --connect-timeout 5 "http://localhost:${WP_PORT}" >/dev/null; then
     echo "✅ WordPress is responding!"
     
     # Activate custom theme if available
@@ -27,8 +29,8 @@ if curl -s --connect-timeout 5 http://localhost:8000 >/dev/null; then
     
     echo ""
     echo "🎉 WordPress is ready!"
-    echo "🌐 Website: http://localhost:8000"
-    echo "👤 Admin: http://localhost:8000/wp-admin"
+    echo "🌐 Website: http://localhost:${WP_PORT}"
+    echo "👤 Admin: http://localhost:${WP_PORT}/wp-admin"
     echo "   Username: admin"
     echo "   Password: password"
     echo ""
