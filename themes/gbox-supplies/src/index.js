@@ -5,6 +5,7 @@
 
 // Import main styles
 import './css/style.css';
+import './css/blocks/core/buttons.css';
 
 // Import editor styles (will be extracted to editor-style.css by wp-scripts)
 import './css/editor-style.css';
